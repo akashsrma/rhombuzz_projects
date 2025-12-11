@@ -3,6 +3,17 @@ import Landing from "./components/Landing";
 import Login from "./components/LoginUi";
 import Navbar from "./components/Navbar";
 import SidebarPage from "./components/LeftSideBar";
+import HomePage from "./pages/Home";
+import SurveyPage from "./pages/Survey";
+import PaymentPage from "./pages/Payment";
+import ManageUserPage from "./pages/ManageUser";
+
+const TAB_COMPONENTS = {
+  1: <HomePage />,
+  2: <SurveyPage />,
+  3: <PaymentPage />,
+  4: <ManageUserPage />,
+};
 function App() {
   const [pageWise, setPageWise] = useState("landing");
   const [user, setUser] = useState(null);
@@ -58,13 +69,10 @@ function App() {
                 overflowY: "auto",
               }}
             >
-              <h1 style={{ fontSize: "32px", fontWeight: "700" }}>
-                {selectedTab.label} starting showing
-              </h1>
-
               <p style={{ fontSize: "16px", marginTop: "4px" }}>
                 Put the details for <strong>{selectedTab.label}</strong> here.
               </p>
+              {TAB_COMPONENTS[selectedTab.id]}
             </main>
           </div>
         </>
