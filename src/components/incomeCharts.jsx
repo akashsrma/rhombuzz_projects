@@ -76,7 +76,7 @@ export default function IncomeChart({ data }) {
               <CartesianGrid stroke="#f3f3f3" vertical={false} />
               <XAxis
                 dataKey="label"
-                tick={{ fontSize: 12, fill: "#888" }}
+                tick={{ fontSize: 11, fill: "#888" }}
                 angle={-25}
                 textAnchor="end"
                 height={50}
