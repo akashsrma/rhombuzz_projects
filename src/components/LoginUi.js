@@ -4,7 +4,7 @@ import { PiEyeClosedDuotone } from "react-icons/pi";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { RxEyeOpen } from "react-icons/rx";
 // signin custom provided
-const VALID_EMAIL = "akash@rhombuzz.in";
+const VALID_EMAIL = "akash@rhombuzz.com";
 const VALID_PASSWORD = "akashrhombuzz@369";
 
 export default function Login({ onLogin }) {
@@ -55,7 +55,7 @@ export default function Login({ onLogin }) {
     <div className="page-wrap">
       <div className="card login-card">
         <h2 className="title">Login to your Account</h2>
-        <p className="subtitle">see what is going on with your business</p>
+        <p className="subtitle">Sign in to access your dashboard</p>
 
         <form className="login-form" onSubmit={handleSubmit}>
           <label className="field-label">Email</label>
