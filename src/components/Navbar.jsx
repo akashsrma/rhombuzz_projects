@@ -3,7 +3,7 @@ import profile_rhombuzz from "../assets/images/profile_rhombuzz.png";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoLogOutOutline, IoSettingsOutline } from "react-icons/io5";
 import { FaCheckCircle } from "react-icons/fa";
-export default function Home({ user, onLogout }) {
+export default function Navbar({ user, onLogout }) {
   const [open, setOpen] = useState(false);
 
   return (

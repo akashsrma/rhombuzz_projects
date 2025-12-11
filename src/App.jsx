@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Landing from "./components/Landing";
-
-import Home from "./components/Home";
 import Login from "./components/LoginUi";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [pageWise, setPageWise] = useState("landing");
@@ -11,7 +10,7 @@ function App() {
   const goToLogin = () => setPageWise("login");
   const goToHome = (email) => {
     setUser({ email });
-    setPageWise("home");
+    setPageWise("navbar");
   };
 
   const logout = () => {
@@ -28,7 +27,7 @@ function App() {
           <Login onLogin={goToHome} />
         </div>
       )}
-      {pageWise === "home" && <Home user={user} onLogout={logout} />}
+      {pageWise === "navbar" && <Navbar user={user} onLogout={logout} />}
     </>
   );
 }
