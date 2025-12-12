@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from "react";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { FiUsers, FiCheckCircle, FiAlertTriangle } from "react-icons/fi";
 
 const companyMonth = {
   totalInvoicesRangeCount: 1000,
-  totalInvoicesRangeOpenCount: 400,
+  totalInvoicesRangeOpenCount: 111,
   totalInvoicesRangePaidCount: 400,
   totalInvoicesRangeDueCount: 200,
   totalInvoicesRangeAmount: 189652.0,
@@ -38,20 +40,11 @@ export default function SalesOverview() {
   return (
     <div style={{ padding: "20px" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "20px",
-          }}
-        >
-          <div>
-            <h3 style={{ color: "#353333ff" }}> Sales</h3>
-            <p style={{ color: "#666" }}>
-              Overview of your invoicing activity.
-            </p>
-          </div>
+        <div style={{ marginBottom: "20px" }}>
+          <h3 style={{ color: "#353333ff" }}> Sales</h3>
+          <p style={{ color: "#666" }}>Overview of your income activity.</p>
         </div>
+
         <div>
           <select
             value={mode}
@@ -63,76 +56,84 @@ export default function SalesOverview() {
           </select>
         </div>
       </div>
+
       {/* Cards */}
       <div style={{ display: "flex", gap: "20px" }}>
-        {/* Total Invoiced */}
         <Card
-          title="Total Invoiced"
+          title="Total Revenue"
           amount={formatCurrency(data.totalInvoicesRangeAmount)}
-          count={`${data.totalInvoicesRangeCount} invoices`}
+          count={`${data.totalInvoicesRangeCount} revenue`}
+          icon={<FaArrowTrendUp size={22} color="#055d5fff" />}
         />
 
-        {/* Open Invoices */}
         <Card
-          title="Open Invoices"
+          title="Active User"
           amount={formatCurrency(data.totalInvoicesRangeOpenAmount)}
-          count={`${data.totalInvoicesRangeOpenCount} open invoices`}
+          count={`${data.totalInvoicesRangeOpenCount} users`}
           borderColor="#4C9AFF"
           badgeColor="#dceeff"
+          icon={<FiUsers size={22} color="#4C9AFF" />}
         />
 
-        {/* Paid Invoices */}
         <Card
           title="Paid Invoices"
           amount={formatCurrency(data.totalInvoicesRangePaidAmount)}
           count={`${data.totalInvoicesRangePaidCount} paid invoices`}
           borderColor="#65D59A"
           badgeColor="#dbf7e7"
+          icon={<FiCheckCircle size={22} color="#65D59A" />}
         />
 
-        {/* Not Paid */}
         <Card
           title="Not Paid"
           amount={formatCurrency(data.totalInvoicesRangeDueAmount)}
           count={`${data.totalInvoicesRangeDueCount} overdue invoices`}
           borderColor="#F7B344"
           badgeColor="#fff1d6"
+          icon={<FiAlertTriangle size={22} color="#F7B344" />}
         />
       </div>
     </div>
   );
 }
 
-// Card Component
+// CARD COMPONENT
 function Card({
   title,
   amount,
   count,
   borderColor = "#ddd",
   badgeColor,
-  icons,
+  icon,
 }) {
   return (
     <div
       style={{
         flex: 1,
-        padding: "9px",
+        padding: "12px",
         borderRadius: "12px",
         border: `1px solid ${borderColor}`,
         background: "#fff",
+        position: "relative",
       }}
     >
+      {/* Icon at right side */}
+      <div
+        style={{
+          position: "absolute",
+          right: "12px",
+          top: "12px",
+          opacity: 0.9,
+        }}
+      >
+        {icon}
+      </div>
+
       <h5 style={{ marginBottom: "2px", marginTop: "3px", color: "#555" }}>
         {title}
       </h5>
-      <h3
-        style={{
-          margin: "0 0 12px 0",
-          color: "#5e5e5eff",
-        }}
-      >
-        ${amount}
-      </h3>
+
+      <h3 style={{ margin: "0 0 12px 0", color: "#5e5e5eff" }}>${amount}</h3>
 
       <div
         style={{
