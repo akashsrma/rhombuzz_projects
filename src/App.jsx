@@ -74,8 +74,8 @@ function App() {
                   " "
                 ) : (
                   <div className="pageTabs">
-                    Put the details for <strong> {selectedTab.label} </strong>
-                    here.
+                    <strong> {selectedTab.label} </strong> : This section is
+                    under construction. check back later for updates!
                   </div>
                 )}
               </p>
