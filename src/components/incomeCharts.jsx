@@ -15,7 +15,7 @@ import { LuDownload } from "react-icons/lu";
 import usePdfDownloader from "../hooks/usePdfDownload";
 
 export default function IncomeChart({ data }) {
-  const [mode, setMode] = useState("month");
+  const [mode, setMode] = useState("year");
   const cardRef = useRef(null);
 
   // Reusable PDF Hook
@@ -79,8 +79,8 @@ export default function IncomeChart({ data }) {
               value={mode}
               onChange={(e) => setMode(e.target.value)}
             >
-              <option value="month">This Month</option>
               <option value="year">This Year</option>
+              <option value="month">This Month</option>
             </select>
           </div>
         </div>
