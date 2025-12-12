@@ -70,7 +70,14 @@ function App() {
               }}
             >
               <p style={{ fontSize: "16px", marginTop: "4px" }}>
-                Put the details for <strong>{selectedTab.label}</strong> here.
+                {selectedTab.label === "Home" ? (
+                  " "
+                ) : (
+                  <div className="pageTabs">
+                    Put the details for <strong> {selectedTab.label} </strong>
+                    here.
+                  </div>
+                )}
               </p>
               {TAB_COMPONENTS[selectedTab.id]}
             </main>

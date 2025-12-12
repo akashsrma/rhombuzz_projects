@@ -546,3 +546,18 @@ html,
   white-space: nowrap;
   cursor: pointer;
 }
+.pageTabs {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 130px;
+}
+.pageTabs-second {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.icons-page {
+  color: #095151;
+  font-size: 21px;
+}

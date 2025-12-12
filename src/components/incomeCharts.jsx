@@ -9,8 +9,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { getDaysLabels, getMonthLabels } from "../utils/incomehelper";
-
-import { MdOutlineCalendarToday } from "react-icons/md";
 import { LuDownload } from "react-icons/lu";
 import usePdfDownloader from "../hooks/usePdfDownload";
 
