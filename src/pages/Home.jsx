@@ -1,5 +1,6 @@
 import React from "react";
 import IncomeChart from "../components/incomeCharts";
+import SalesOverview from "../components/companyOverview";
 
 const year = {
   label: "year",
@@ -57,11 +58,15 @@ const month = {
     31: 30000,
   },
 };
-
 export default function HomePage() {
   return (
-    <div className="dashboard-container">
-      <IncomeChart data={{ year: year?.year, month: month?.month }} />
-    </div>
+    <>
+      <div className="dashboard-container-one">
+        <SalesOverview />
+      </div>
+      <div className="dashboard-container">
+        <IncomeChart data={{ year: year?.year, month: month?.month }} />
+      </div>
+    </>
   );
 }

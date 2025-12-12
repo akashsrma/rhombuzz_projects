@@ -561,3 +561,7 @@ html,
   color: #095151;
   font-size: 21px;
 }
+.dashboard-container-one {
+  background-color: #f3f4f6;
+  margin-bottom: 5px;
+}
