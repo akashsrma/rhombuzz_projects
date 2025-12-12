@@ -63,7 +63,7 @@ export default function SalesOverview() {
           title="Total Revenue"
           amount={formatCurrency(data.totalInvoicesRangeAmount)}
           count={`${data.totalInvoicesRangeCount} revenue`}
-          icon={<FaArrowTrendUp size={22} color="#055d5fff" />}
+          icon={<FaArrowTrendUp size={15} color="#055d5fff" />}
         />
 
         <Card
@@ -72,7 +72,7 @@ export default function SalesOverview() {
           count={`${data.totalInvoicesRangeOpenCount} users`}
           borderColor="#4C9AFF"
           badgeColor="#dceeff"
-          icon={<FiUsers size={22} color="#4C9AFF" />}
+          icon={<FiUsers size={15} color="#4C9AFF" />}
         />
 
         <Card
@@ -81,7 +81,7 @@ export default function SalesOverview() {
           count={`${data.totalInvoicesRangePaidCount} paid invoices`}
           borderColor="#65D59A"
           badgeColor="#dbf7e7"
-          icon={<FiCheckCircle size={22} color="#65D59A" />}
+          icon={<FiCheckCircle size={15} color="#65D59A" />}
         />
 
         <Card
@@ -90,7 +90,7 @@ export default function SalesOverview() {
           count={`${data.totalInvoicesRangeDueCount} overdue invoices`}
           borderColor="#F7B344"
           badgeColor="#fff1d6"
-          icon={<FiAlertTriangle size={22} color="#F7B344" />}
+          icon={<FiAlertTriangle size={15} color="#F7B344" />}
         />
       </div>
     </div>
