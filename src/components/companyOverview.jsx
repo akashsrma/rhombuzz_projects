@@ -3,10 +3,10 @@ import { FaArrowTrendUp } from "react-icons/fa6";
 import { FiUsers, FiCheckCircle, FiAlertTriangle } from "react-icons/fi";
 
 const companyMonth = {
-  totalInvoicesRangeCount: 1000,
+  totalInvoicesRangeCount: 100,
   totalInvoicesRangeOpenCount: 111,
-  totalInvoicesRangePaidCount: 400,
-  totalInvoicesRangeDueCount: 200,
+  totalInvoicesRangePaidCount: 40,
+  totalInvoicesRangeDueCount: 20,
   totalInvoicesRangeAmount: 189652.0,
   totalInvoicesRangeOpenAmount: 36900.0,
   totalInvoicesRangePaidAmount: 1236.0,
@@ -38,7 +38,7 @@ export default function SalesOverview() {
     });
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "25px" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div style={{ marginBottom: "20px" }}>
           <h3 style={{ color: "#353333ff" }}> Sales</h3>

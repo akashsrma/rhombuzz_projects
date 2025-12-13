@@ -74,8 +74,17 @@ function App() {
                   " "
                 ) : (
                   <div className="pageTabs">
-                    <strong> {selectedTab.label} </strong> : This section is
-                    under construction. check back later for updates!
+                    <strong
+                      style={{
+                        color: "teal",
+                        fontSize: "18px",
+                      }}
+                    >
+                      {" "}
+                      {selectedTab.label}{" "}
+                    </strong>{" "}
+                    : This section is under construction. check back later for
+                    updates!
                   </div>
                 )}
               </p>

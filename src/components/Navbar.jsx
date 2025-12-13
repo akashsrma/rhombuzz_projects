@@ -10,7 +10,17 @@ export default function Navbar({ user, onLogout }) {
     <>
       {/* NAVBAR */}
       <div className="navbar">
-        <div className="navbar-left">Welcome Rhombuzz </div>
+        <div
+          className="navbar-left"
+          style={{
+            backgroundColor: "#eef3f4ff",
+            padding: "5px",
+            borderRadius: "5px",
+            letterSpacing: "1.6px",
+          }}
+        >
+          Welcome Rhombuzz{" "}
+        </div>
 
         <div className="navbar-right" onClick={() => setOpen(!open)}>
           <img
