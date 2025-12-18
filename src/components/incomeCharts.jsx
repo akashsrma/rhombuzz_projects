@@ -41,7 +41,7 @@ export default function IncomeChart({ data }) {
 
   return (
     <>
-      <div ref={cardRef} className="income-card" style={{ padding: 20 }}>
+      <div ref={cardRef} className="income-card" style={{ padding: 19 }}>
         <div
           className="income-header"
           style={{
